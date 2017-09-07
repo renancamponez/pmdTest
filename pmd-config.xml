@@ -17,6 +17,7 @@
   <rule ref="rulesets/unusedcode.xml/UnusedPrivateField"/>
   <rule ref="rulesets/imports.xml/DuplicateImports"/>
   <rule ref="rulesets/basic.xml/UnnecessaryConversionTemporary"/>
+  <rule ref="rulesets/java/naming.xml"/>
 
   <!-- We want to customize this rule a bit, change the message and raise the priority  -->
   <rule
@@ -33,7 +34,7 @@
   </rule>
 
   <!-- Note we want everything from braces.xml except WhileLoopsMustUseBraces -->
-  <rule ref="rulesets/braces.xml">
-    <exclude name="WhileLoopsMustUseBraces"/>
-  </rule>
+  <rule ref="rulesets/braces.xml"/>
+  <!--  <exclude name="WhileLoopsMustUseBraces"/>
+  </rule> -->
 </ruleset>
