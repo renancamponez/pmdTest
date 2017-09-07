@@ -32,11 +32,11 @@ public class App {
 	}
 
 	public static List<ZipCodeRange> createZcRange() {
-		ZipCodeRange range1 = new ZipCodeRange(94133, 94133);
+		ZipCodeRange r1 = new ZipCodeRange(94133, 94133);
 		ZipCodeRange range2 = new ZipCodeRange(94200, 94299);
 		ZipCodeRange range3 = new ZipCodeRange(94600, 94699);
 		List<ZipCodeRange> ranges = new ArrayList<ZipCodeRange>();
-		ranges.add(range1);
+		ranges.add(r1);
 		ranges.add(range2);
 		ranges.add(range3);
 		return ranges;
