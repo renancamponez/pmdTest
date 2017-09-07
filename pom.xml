@@ -64,7 +64,7 @@
                 <configuration>
                     <rulesets>
                         <!-- Two rule sets that come bundled with PMD -->
-                        <ruleset>../pmd.xml</ruleset>
+                        <ruleset>../pmd-config.xml</ruleset>
                       </rulesets>                
                   </configuration>
             </plugin>
