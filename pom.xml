@@ -61,13 +61,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.8</version>
                 <configuration>
-                    <targetJdk>1.6</targetJdk>
-                    <!--<rulesets>-->
-                    <!--<ruleset>pmd_rules.xml</ruleset>-->
-                    <!--</rulesets>-->
-                </configuration>
+                    <rulesets>
+                        <!-- Two rule sets that come bundled with PMD -->
+                        <ruleset>/rulesets/java/braces.xml</ruleset>
+                        <ruleset>/rulesets/java/naming.xml</ruleset>
+                      </rulesets>                
+                  </configuration>
             </plugin>
         </plugins>
     </reporting>
