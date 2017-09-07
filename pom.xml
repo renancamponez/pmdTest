@@ -57,7 +57,6 @@
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.3</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -66,7 +65,8 @@
                     <rulesets>
                         <ruleset>/rulesets/java/naming.xml</ruleset>
                         <ruleset>/rulesets/java/braces.xml</ruleset>
-                      </rulesets>                
+                      </rulesets>    
+                      <minimumPriority>1</minimumPriority>            
                   </configuration>
             </plugin>
         </plugins>
