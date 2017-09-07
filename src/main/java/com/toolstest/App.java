@@ -9,6 +9,7 @@ public class App {
 
 	private String blabla; 
 	public static void main(String[] args) {
+		int r = 20 ;
 		// TODO Auto-generated method stub
 		testIfZcCanBeShipped();
 		testIfZcCannotBeShipped();
