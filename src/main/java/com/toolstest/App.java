@@ -10,4 +10,8 @@ public class App {
     while(true)
     	System.out.println("bla");
   }
+
+  private void testing_naming_conventions(){
+  	System.out.println("ha ha ");
+  }
 }
