@@ -66,7 +66,8 @@
                         <ruleset>/rulesets/java/naming.xml</ruleset>
                         <ruleset>/rulesets/java/braces.xml</ruleset>
                       </rulesets>    
-                      <minimumPriority>1</minimumPriority>            
+                      <minimumPriority>1</minimumPriority>   
+                      <benchmark>true</benchmark>         
                   </configuration>
             </plugin>
         </plugins>
