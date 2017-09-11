@@ -49,6 +49,12 @@ public class Order implements Serializable {
     @Column(length = 10)
     private String status;
 
+    private BigDecimal total;
+ 
+    private BigDecimal totalTax;
+ 
+    private BigDecimal grandTotal;
+
     @ManyToMany(fetch = EAGER, cascade = ALL)
     @JoinTable(
             name = "order_product",
