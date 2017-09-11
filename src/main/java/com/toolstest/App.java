@@ -7,7 +7,6 @@ public class App {
     for (int i = 0; i < 10; i++) { // Not a Violation (inside FOR)
       r += q;
     }
-    testing_naming_conventions();
     while(true)
     	System.out.println("bla");
   }
