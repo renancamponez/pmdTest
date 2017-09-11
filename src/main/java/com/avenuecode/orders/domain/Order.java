@@ -46,12 +46,6 @@ public class Order implements Serializable {
     @Column(nullable = false)
     private BigDecimal taxPercent;
 
-    private BigDecimal total;
-
-    private BigDecimal totalTax;
-
-    private BigDecimal grandTotal;
-
     @Column(length = 10)
     private String status;
 
