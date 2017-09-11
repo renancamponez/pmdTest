@@ -31,7 +31,7 @@ public class OrdersApplicationIntegrationTest {
 	private MockMvc mvc;
 
 	@Test
-	public void testAllOrders() {
+	public void testAllOrders() throws Exception {
 
 		mvc.perform(get("/orders").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON)).andDo(print())
