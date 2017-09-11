@@ -46,12 +46,6 @@ public class Order implements Serializable {
     @Column(nullable = false)
     private BigDecimal taxPercent;
 
-    private BigDecimal total;
-
-    private BigDecimal totalTax;
-
-    private BigDecimal grandTotal;
-
     @Column(length = 10)
     private String status;
 
@@ -91,15 +85,15 @@ public class Order implements Serializable {
 	super();
     }
 
-    public Order(String _orderId, String _orderNumber, 
-		 BigDecimal _discount, BigDecimal _tax_percent,
-		 String _status, List<Product> _products) {
-	super();
-	orderId = _orderId;
-	orderNumber = _orderNumber;
-	discount = _discount;
-	taxPercent = _tax_percent;
-	status = _status;
-	products = _products;
+    public Order(String orderId, String orderNumber, 
+		 BigDecimal discount, BigDecimal taxPercent,
+		 String status, List<Product> products) {
+    	super();
+    	orderId = orderId;
+    	orderNumber = orderNumber;
+    	discount = discount;
+    	taxPercent = taxPercent;
+    	status = status;
+    	products = products;
     }
 }
