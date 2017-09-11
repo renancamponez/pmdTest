@@ -104,6 +104,7 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
     <!-- coverage -->
     <profile>
         <id>coverage</id>
@@ -218,6 +219,7 @@
             </plugins>
         </build>
     </profile>
+</profiles>
 
 
 </project>
