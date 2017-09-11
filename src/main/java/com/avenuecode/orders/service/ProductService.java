@@ -21,8 +21,4 @@ public class ProductService {
         return productRepository.findOne(productId);
     }
 
-    // criteria 4
-    public List<Product> getExpensiveProducts() {
-	return productRepository.getExpensiveProducts();
-    }
 }

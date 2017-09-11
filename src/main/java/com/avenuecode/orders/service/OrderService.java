@@ -21,18 +21,4 @@ public class OrderService {
         return orderRepository.findOne(orderId);
     }
 
-    // criteria 1
-    public List<Order> getShipped() {
-	return orderRepository.getShipped();
-    }
-
-    // criteria 2
-    public List<Order> getDiscounted() {
-	return orderRepository.getDiscounted();
-    }
-
-    // criteria 3
-    public List<Order> getBigOrders() {
-	return orderRepository.getBigOrders();
-    }
 }

@@ -35,21 +35,4 @@ public class Product implements Serializable {
     @Column(nullable = false)
     private BigDecimal price;
 
-    public Product() {
-	super();
-    }
-
-    public Product(String _productId, String _upc, String _sku,
-		   String _description, BigDecimal _price) {
-	super();
-	productId = _productId;
-	upc = _upc;
-	sku = _sku;
-	description = _description;
-	price = _price;
-    }
-
-    public String getProdId() {
-	return productId;
-    }
 }

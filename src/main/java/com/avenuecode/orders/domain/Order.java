@@ -46,14 +46,14 @@ public class Order implements Serializable {
     @Column(nullable = false)
     private BigDecimal taxPercent;
 
+    private BigDecimal total;
+
+    private BigDecimal totalTax;
+
+    private BigDecimal grandTotal;
+
     @Column(length = 10)
     private String status;
-
-    private BigDecimal total;
- 
-    private BigDecimal totalTax;
- 
-    private BigDecimal grandTotal;
 
     @ManyToMany(fetch = EAGER, cascade = ALL)
     @JoinTable(
@@ -87,19 +87,4 @@ public class Order implements Serializable {
         return value.setScale(PRECISION, ROUND_FLOOR);
     }
 
-    public Order() {
-	super();
-    }
-
-    public Order(String orderId, String orderNumber, 
-		 BigDecimal discount, BigDecimal taxPercent,
-		 String status, List<Product> products) {
-    	super();
-    	orderId = orderId;
-    	orderNumber = orderNumber;
-    	discount = discount;
-    	taxPercent = taxPercent;
-    	status = status;
-    	products = products;
-    }
 }
