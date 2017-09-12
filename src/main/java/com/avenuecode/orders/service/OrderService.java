@@ -21,4 +21,6 @@ public class OrderService {
         return orderRepository.findOne(orderId);
     }
 
+    public int blabla(){ return 1;}
+
 }
