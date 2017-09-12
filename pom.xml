@@ -61,6 +61,11 @@
         <sonar.jacoco.itReportPath>${jacoco.outputDir}/${jacoco.out.it.file}</sonar.jacoco.itReportPath>
         <!-- <sonar.junit.reportsPath>${project.build.directory}/surefire-reports/</sonar.junit.reportsPath> -->
         <!-- <sonar.tests>src/test/java</sonar.tests> -->
+
+        <sonar.coverage.exclusions>
+            **/domain/**
+        </sonar.coverage.exclusions>
+
         <!-- === END of Sonar/Reporting settings === -->
 
     </properties>
