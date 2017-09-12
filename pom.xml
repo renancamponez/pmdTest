@@ -37,10 +37,10 @@
         <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <!-- Jacoco version to use -->
-        <!-- REnan <jacoco.version>0.7.4</jacoco.version> -->
-         <!-- The Sonar Jacoco Listener for JUnit to extract coverage details per test -->
-        <!-- Renan <sonar-jacoco-listeners.version>1.4</sonar-jacoco-listeners.version> -->
-         <!-- Don't let Sonar execute tests. We will ask it to Maven 'sonar.dynamicAnalysis' is deprecated since version 4.3 and should no longer be used. -->
+        <jacoco.version>0.7.2.201409121644</jacoco.version>
+        <!-- The Sonar Jacoco Listener for JUnit to extract coverage details per test -->
+        <sonar-jacoco-listeners.version>1.4</sonar-jacoco-listeners.version>
+        <!-- Don't let Sonar execute tests. We will ask it to Maven 'sonar.dynamicAnalysis' is deprecated since version 4.3 and should no longer be used. -->
         <!-- <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis> -->
         <!-- The system property jacoco.outputDir needs to be override on the command line
             with an absolute path if you want to merge results from all modules.
@@ -148,11 +148,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <configuration>
-                        <excludes>
-                            <exclude>com.avenuecode.orders.domain.*</exclude>
-                        </excludes>
-                    </configuration>
+                    <version>${jacoco.version}</version>
                     <executions>
                         <!-- Prepares a variable, jacoco.agent.ut.arg, that contains the info 
                             to be passed to the JVM hosting the code being tested. -->
@@ -190,6 +186,7 @@
             <dependency>
                 <groupId>org.codehaus.sonar-plugins.java</groupId>
                 <artifactId>sonar-jacoco-listeners</artifactId>
+                <version>${sonar-jacoco-listeners.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
