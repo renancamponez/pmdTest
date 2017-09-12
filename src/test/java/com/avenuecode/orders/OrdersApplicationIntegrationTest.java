@@ -38,7 +38,7 @@ public class OrdersApplicationIntegrationTest {
 
 	@Test
 	public void testFindOne() throws Exception {
-		mvc.perform(get("/orders/0").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mvc.perform(get("/orders/1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 		.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
 	}
 
