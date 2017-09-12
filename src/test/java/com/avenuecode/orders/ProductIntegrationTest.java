@@ -19,27 +19,27 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = OrdersApplication.class)
 @AutoConfigureMockMvc
-public class OrdersApplicationIntegrationTest {
+public class ProductIntegrationTest {
 
 	@Autowired
 	private MockMvc mvc;
 
 	@Test
-	public void testAllOrders() throws Exception {
-		mvc.perform(get("/orders").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+	public void testGetAllProducts() throws Exception {
+		mvc.perform(get("/products").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON)).andDo(print())
 				.andExpect(jsonPath("$[*]", hasSize(greaterThan(0))));
 	}
 
 	@Test
 	public void testFindOne() throws Exception {
-		mvc.perform(get("/orders/1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mvc.perform(get("/products/1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 		.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
 	}
 
 	@Test
 	public void testFindNonExisting() throws Exception {
-		mvc.perform(get("/orders/0").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+		mvc.perform(get("/products/0").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
 	}
 
 }
