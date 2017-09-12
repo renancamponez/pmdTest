@@ -30,12 +30,20 @@ public class OrdersApplicationIntegrationTest {
 	@Autowired
 	private MockMvc mvc;
 
+	@Autowired
+	private OrderService orderService;
+
 	@Test
 	public void testAllOrders() throws Exception {
 
 		mvc.perform(get("/orders").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON)).andDo(print())
 				.andExpect(jsonPath("$[*]", hasSize(greaterThan(0))));
+	}
+
+	@Test
+	public void test(){
+		assertEquals(orderService.blabla(), 1);
 	}
 
 }
