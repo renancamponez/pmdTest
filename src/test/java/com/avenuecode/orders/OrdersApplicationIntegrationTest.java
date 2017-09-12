@@ -29,12 +29,6 @@ public class OrdersApplicationIntegrationTest {
 	@Autowired
 	private MockMvc mvc;
 
-	@Autowired
-	private OrderService orderService;
-
-	@Autowired
-	private TestRestTemplate restTemplate;
-
 	@Test
 	public void testAllOrders() throws Exception {
 		mvc.perform(get("/orders").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
