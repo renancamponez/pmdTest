@@ -149,6 +149,11 @@
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>${jacoco.version}</version>
+                    <configuration>
+                        <excludes>
+                            <exclude>com.avenuecode.orders.domain.*</exclude>
+                        </excludes>
+                    </configuration>
                     <executions>
                         <!-- Prepares a variable, jacoco.agent.ut.arg, that contains the info 
                             to be passed to the JVM hosting the code being tested. -->
