@@ -62,10 +62,6 @@
         <!-- <sonar.junit.reportsPath>${project.build.directory}/surefire-reports/</sonar.junit.reportsPath> -->
         <!-- <sonar.tests>src/test/java</sonar.tests> -->
 
-        <sonar.exclusions>
-            src/main/java/com/avenuecode/orders/domain/*
-        </sonar.exclusions>
-
         <!-- === END of Sonar/Reporting settings === -->
 
     </properties>
@@ -156,7 +152,7 @@
                     <version>${jacoco.version}</version>
                     <configuration>
                         <excludes>
-                            <exclude>com.avenuecode.orders.domain.*</exclude>
+                            <exclude>src/main/java/com/avenuecode/orders/domain/*</exclude>
                         </excludes>
                     </configuration>
                     <executions>
